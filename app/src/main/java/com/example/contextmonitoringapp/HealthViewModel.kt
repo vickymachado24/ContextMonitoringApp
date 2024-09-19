@@ -148,9 +148,9 @@ class HealthViewModel(private val healthDao: HealthDao) : ViewModel() {
     fun saveHealthData(symptomRatings: Map<String, Int>) {
         viewModelScope.launch {
             val health = Health(
-                heartRate = getHeartRate(),  // Use the method to get the value
-                respiratoryRate = getRespiratoryRate(),  // Use the method to get the value
-                nausea = symptomRatings.getOrDefault("Nausea", 0),  // Default value if no rating is provided
+                heartRate = getHeartRate(),
+                respiratoryRate = getRespiratoryRate(),
+                nausea = symptomRatings.getOrDefault("Nausea", 0),  // Default 0
                 headache = symptomRatings.getOrDefault("Headache", 0),
                 diarrhea = symptomRatings.getOrDefault("Diarrhea", 0),
                 soarThroat = symptomRatings.getOrDefault("Soar Throat", 0),

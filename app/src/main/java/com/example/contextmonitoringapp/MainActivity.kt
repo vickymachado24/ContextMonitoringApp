@@ -125,7 +125,7 @@ class MainActivity : ComponentActivity() {
             )
             Spacer(Modifier.size(10.dp))
             Text(
-                text = "Respiratory Rate: $displayRespRate",  // Automatically updates when the respiratory rate changes
+                text = "Respiratory Rate: $displayRespRate",
                 style = MaterialTheme.typography.titleMedium
             )
         }
@@ -210,7 +210,7 @@ class MainActivity : ComponentActivity() {
         val symptomRatings = remember { mutableStateMapOf<String, Int>() }
 
         var selectedSymptom by remember { mutableStateOf("") }
-        var rating by remember { mutableIntStateOf(1) } // State to manage slider rating dynamically
+        var rating by remember { mutableIntStateOf(1) }
 
         Column(
             modifier = Modifier
